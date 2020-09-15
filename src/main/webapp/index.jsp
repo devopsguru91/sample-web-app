@@ -11,6 +11,10 @@
       <div class="hero-inner">
         <h1>My Awesome Website</h1>
         <h2>Look at this website and enjoy the view!</h2>
+
+       <h1>My Awesome Website - new changes are coming soon!</h1>
+       <h2>Look at this website and enjoy the view! - wait for new changes!</h2>
+
         <a href="https://www.youtube.com/channel/UCq3a5LV2NtHt526ZDQYwPig?view_as=subscriber" class="btn">Search the Web</a>
       </div>
 
