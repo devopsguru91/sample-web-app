@@ -15,12 +15,11 @@ phases:
     commands:
       - echo Build completed on `date`
       - yum install git -y
-      - yum install zip -y
-      - git clone https://github.com/Dgruploads/AWS.git
-      - cp -R AWS/CodeDeploy/* target/
-      
+      - yum install zip -y      
 artifacts:
   files:
     - target/sample-web-app.war
+    - git clone https://github.com/Dgruploads/AWS.git
+    - cp -R AWS/CodeDeploy/* target/
     - zip -r target/sample-web-app.war target/scripts target/appspec.yml sample-web-app.zip
     - aws s3 cp sample-web-app.zip s3://dgruploads-build-artifacts
