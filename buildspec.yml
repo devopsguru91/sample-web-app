@@ -22,5 +22,5 @@ phases:
 artifacts:
   files:
     - target/sample-web-app.war
-    - zip target/sample-web-app.war target/scripts target/appspec.yml sample-web-app.zip
+    - zip -r target/sample-web-app.war target/scripts target/appspec.yml sample-web-app.zip
     - aws s3 cp sample-web-app.zip s3://dgruploads-build-artifacts
