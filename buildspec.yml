@@ -18,7 +18,7 @@ phases:
       - yum install zip -y     
       - git clone https://github.com/Dgruploads/AWS.git
       - cp -R AWS/CodeDeploy/* target/
-      - zip -r target/sample-web-app.war target/scripts target/appspec.yml sample-web-app.zip
+      - zip -r sample-web-app.zip target/sample-web-app.war target/scripts target/appspec.yml
       - aws s3 cp sample-web-app.zip s3://dgruploads-build-artifacts
 artifacts:
   files:
