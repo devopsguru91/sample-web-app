@@ -17,7 +17,7 @@ phases:
       - yum install git -y
       - yum install zip -y
       - git clone https://github.com/Dgruploads/AWS.git
-      - cp -R AWS/scripts AWS/appspec.yml target/
+      - cp -R AWS/CodeDeploy/* target/
       
 artifacts:
   files:
