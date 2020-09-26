@@ -13,7 +13,13 @@ phases:
       - mvn clean install
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed on `date'
+      - yum install git -y
+      - yum install zip -y
+      - git clone https://github.com/Dgruploads/AWS.git
+      - cp -R AWS/scripts AWS/appspec.yml target/
+      
 artifacts:
   files:
     - target/sample-web-app.war
+    - zip target/sample-web-app.war target/scripts target/appspec.yml sample-web-app.zip
