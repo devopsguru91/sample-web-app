@@ -19,7 +19,7 @@
        <h2>Look at this website and enjoy the view! - wait for new changes!</h2>
 
 
-        <a href="https://www.youtube.com/channel/UCq3a5LV2NtHt526ZDQYwPig?view_as=subscriber" class="btn">Search the Web</a>
+        <a href="" class="btn">Search the Web</a>
       </div>
 
       <header>
