@@ -9,17 +9,18 @@ phases:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - echo Build started on `date`
-      - mvn clean install
+      - echo Build started on 'date'
+      - mvn clean package
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed on 'date'
       - yum install git -y
       - yum install zip -y     
-      - git clone https://github.com/Dgruploads/AWS.git
-      - cp -R AWS/CodeDeploy/* target/
+      - git clone https://github.com/devopsguru91/AWS-DevOps-Demo.git
+      - cp -R AWS-DevOps-Demo/appspec.yml target/
+      - cp -R AWS-DevOps-Demo/scripts target/
       - zip -r sample-web-app.zip target/sample-web-app.war target/scripts target/appspec.yml
-      - aws s3 cp sample-web-app.zip s3://dgruploads-build-artifacts
+      - aws s3 cp sample-web-app.zip s3://devopsguru-build-artifacts
 artifacts:
   files:
     - target/sample-web-app.war
